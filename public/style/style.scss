@@ -34,26 +34,32 @@ body{
         .logo{
             font-weight: 600;
             font-size: 18px;
+            border: 1px solid orange;
+
         }
         nav{
             width: 50%;
             @include flexbox(center, center);
             gap: 36px;
+            border: 1px solid orange;
             a{
                 text-decoration: none;
                 color: black;
                 font-weight: 450;
                 font-size: 14px;
-                transition: 200ms;
-                padding: 4px 4px;
+                transition: 400ms;
+                padding: 4px 12px;
+                box-shadow: 0em 0em 0 0 black,
+                inset 0em 0em 0 0 black;
                 &:hover{
-                    box-shadow: 0.1em 0.1em 0 0 black,
-                                inset 0em 5em 0 0 black;
+                    box-shadow: 0em 0em 0 0 black,
+                                inset 20em 0em 0 0 black;
                     color: white;
                 }
             }
         }
         .sign-in{
+            border: 1px solid orange;
             .sign-in-btn{
                 padding: 6px 12px;
                 border: none;
@@ -74,47 +80,61 @@ body{
                 }
             }
         }
-
+        
     }
     .home-page-wrap{
-        height: calc(100vh - 50px);
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        .img-home-wrap{
-            // border: 1px solid green;
-            padding: 20px 100px;
-            height: calc((100vh - 150px)/2);
-            &:nth-child(1), &:nth-child(4){
-                @include flexbox(flex-end, flex-start);
+        width: 100vw;
+        @include flexbox(center, center);
+        border: 1px solid blue;
+        .home-page{
+            height: calc(100vh - 50px);
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1440px;
+            div{
+                border: 1px solid green;
             }
-            &:nth-child(3), &:nth-child(6){
-                @include flexbox(flex-end, flex-end);
-            }
-            img{
-                height: 70%;
-                border-radius: 8px;
-                transition: 400ms;
-                &:hover{
-                    cursor: pointer;
-                    transform: scale(1.05);
+            .img-home-wrap{
+                // border: 1px solid green;
+                padding: 20px 10%;
+                height: calc((100vh - 150px)/2);
+                &:nth-child(1), &:nth-child(4){
+                    @include flexbox(flex-end, flex-start);
                 }
-            }
-            .img-bg{
-                height: 100%;
-                @include flexbox(flex-end, center);
-                .bg{
-                    @include flexbox(center, center);
-                    height: 60%;
-                    padding: 24px 24px;
-                    border-radius: 8px;
-                    background-color: rgb(216, 216, 216);
+                &:nth-child(3), &:nth-child(6){
+                    @include flexbox(flex-end, flex-end);
                 }
                 img{
-                    height: 75%;
+                    width: 70%;
+                    max-width: 350px;
+                    min-width: 200px;
+                    border-radius: 8px;
+                    transition: 400ms;
+                    &:hover{
+                        cursor: pointer;
+                        transform: scale(1.05);
+                    }
+                }
+                .img-bg{
+                    width: 100%;
+                    @include flexbox(flex-end, center);
+                    border: 1px solid blue;
+                    height: 100%;
+                    .bg{
+                        @include flexbox(center, center);
+                        height: 70%;
+                        padding: 24px 24px;
+                        border-radius: 8px;
+                        background-color: rgb(216, 216, 216);
+                    }
+                    img{
+                        width: 65%;
+                        max-width: 350px;
+                        min-width: 150px;
+                    }
                 }
             }
-        }
         .home-page-content{
             @include flexbox(center, flex-end);
             gap: 16px;
@@ -150,13 +170,18 @@ body{
                 }
             }
         }
+    }
     }  
 }
 
 .homepage-footer{
+    width: 100vw;
+    @include flexbox(center, center);
+    .footer{   
     height: 100px;
     text-align: center;
     padding-top: 12px;
+    max-width: 1440px;
     .msg{
         color: rgb(129, 129, 129);
         font-size: 12px;
@@ -165,13 +190,16 @@ body{
         width: 100%;
         @include flexbox(flex-end, center);
         margin-top: 8px;
+        border: 1px solid green;
+
         .company-name{
             display: grid;
             grid-template-columns: repeat(7,1fr);
             gap: 6px;
             img{
-                height: 75%;
+                width: 75%;
                 transition: 200ms;
+                border: 1px solid red;
                 &:hover{
                     cursor: pointer;
                     transform: scale(1.1);
@@ -179,6 +207,7 @@ body{
             }
         }
     }
+}
 }
 
 .second-page{
@@ -224,7 +253,43 @@ body{
 .third-page{
     .working-section{
         height: 100vh;
-        border: 1px solid blue;
+        padding: 24px 124px;
+        @include flexbox(flex-start, center);
+        flex-direction: column;
+        .main-heading{
+            font-size: 18px;
+            font-weight: 450;
+            margin-bottom: 12px;
+        }
+        .sub-heading{
+            font-size: 12px;
+            color: rgb(167, 167, 167);
+            font-weight: 350;
+        }
+        .working-box-wrap{
+            margin-top: 60px;
+            .box{
+                @include flexbox(flex-start, flex-start);
+                gap: 24px;
+                .num{
+                    background-color: rgb(235, 235, 235);
+                    font-weight: 500;
+                    border-radius: 50px;
+                    padding: 20px 12px;
+                }
+                .info{
+                    width: 60%;
+                    height: 20vh;
+                    @include flexbox(flex-start, flex-start);
+                    gap: 12px;
+                    flex-direction: column;
+                    .about{
+                        font-size: 14px;
+                    }
+                }
+
+            }
+        }
     }
 }
 
