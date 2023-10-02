@@ -14,8 +14,8 @@
 
 /* Customize scrollbar width */
 ::-webkit-scrollbar {
-    width: 7px;
-    // display: none;
+    // width: 7px;
+    display: none;
 }
 
 body{
@@ -181,4 +181,50 @@ body{
     }
 }
 
+.second-page{
+    height: calc(100vh - 100px);
+    min-height: 700px;
+    padding: 24px 100px;
+    .images-wrap{
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        div{
+            height: calc((100vh - 160px)/2);
+            @include flexbox(center, center);
+            border-radius: 12px;
+            background-color: rgb(238, 238, 238);
+            img{
+                height: 85%;
+                border-radius: 12px;
+                box-shadow: 2px 2px 20px rgb(167, 167, 167);
+                transition: 400ms;
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
+            }
+        }
+        .img1, .img4{
+            width: 60%;
+        }
+        .img2{
+            margin-left: -40%;
+        }
+        .img2, .img3{
+            width: 140%;
+        }
+        .img4{
+            margin-left: 40%;
+        }
+    }
+}
+
+.third-page{
+    .working-section{
+        height: 100vh;
+        border: 1px solid blue;
+    }
+}
 

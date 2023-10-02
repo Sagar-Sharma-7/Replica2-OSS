@@ -7,7 +7,7 @@
 
 /* Customize scrollbar width */
 ::-webkit-scrollbar {
-  width: 7px;
+  display: none;
 }
 
 body {
@@ -178,4 +178,51 @@ body {
 .homepage-footer .company-wrap .company-name img:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+
+.second-page {
+  height: calc(100vh - 100px);
+  min-height: 700px;
+  padding: 24px 100px;
+}
+.second-page .images-wrap {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.second-page .images-wrap div {
+  height: calc((100vh - 160px) / 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: rgb(238, 238, 238);
+}
+.second-page .images-wrap div img {
+  height: 85%;
+  border-radius: 12px;
+  box-shadow: 2px 2px 20px rgb(167, 167, 167);
+  transition: 400ms;
+}
+.second-page .images-wrap div img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.second-page .images-wrap .img1, .second-page .images-wrap .img4 {
+  width: 60%;
+}
+.second-page .images-wrap .img2 {
+  margin-left: -40%;
+}
+.second-page .images-wrap .img2, .second-page .images-wrap .img3 {
+  width: 140%;
+}
+.second-page .images-wrap .img4 {
+  margin-left: 40%;
+}
+
+.third-page .working-section {
+  height: 100vh;
+  border: 1px solid blue;
 }/*# sourceMappingURL=style.css.map */
