@@ -6,6 +6,10 @@
 }
 
 /* Customize scrollbar width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
@@ -48,22 +52,23 @@ body {
 }
 .main-container header .sign-in .sign-in-btn {
   padding: 6px 12px;
-  border: 1px solid black;
+  border: none;
   background-color: transparent;
   outline: none;
   border-radius: 50px;
   font-size: 14px;
   color: black;
   transition: 400ms;
+  box-shadow: 0.1em 0.1em 0 0 black, inset 0.1em 0.1em 0 0 black;
 }
 .main-container header .sign-in .sign-in-btn:hover {
   cursor: pointer;
   color: white;
   border: 1px solid black;
-  box-shadow: 0.1em 0.1em 0 0 black, inset 0em 5em 0 0 black;
+  box-shadow: 0.1em 0.1em 0 0 black, inset 5em 5em 0 0 black;
 }
 .main-container .home-page-wrap {
-  height: calc(100vh - 150px);
+  height: calc(100vh - 50px);
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -143,4 +148,34 @@ body {
   background-color: white;
   color: black;
   cursor: pointer;
+}
+
+.homepage-footer {
+  height: 100px;
+  text-align: center;
+  padding-top: 12px;
+}
+.homepage-footer .msg {
+  color: rgb(129, 129, 129);
+  font-size: 12px;
+}
+.homepage-footer .company-wrap {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 8px;
+}
+.homepage-footer .company-wrap .company-name {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+.homepage-footer .company-wrap .company-name img {
+  height: 75%;
+  transition: 200ms;
+}
+.homepage-footer .company-wrap .company-name img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */
