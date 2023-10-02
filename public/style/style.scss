@@ -12,8 +12,15 @@
     justify-content: $justify;
 }
 
+/* Customize scrollbar width */
+// ::-webkit-scrollbar {
+//     width: 7px;
+//     // display: none;
+// }
+
 body{
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 .main-container{
@@ -37,6 +44,13 @@ body{
                 color: black;
                 font-weight: 450;
                 font-size: 14px;
+                transition: 200ms;
+                padding: 4px 4px;
+                &:hover{
+                    box-shadow: 0.1em 0.1em 0 0 black,
+                                inset 0em 5em 0 0 black;
+                    color: white;
+                }
             }
         }
         .sign-in{
@@ -59,6 +73,81 @@ body{
             }
         }
 
+    }
+    .home-page-wrap{
+        height: calc(100vh - 150px);
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .img-home-wrap{
+            // border: 1px solid green;
+            padding: 20px 100px;
+            height: calc((100vh - 150px)/2);
+            &:nth-child(1), &:nth-child(4){
+                @include flexbox(flex-end, flex-start);
+            }
+            &:nth-child(3), &:nth-child(6){
+                @include flexbox(flex-end, flex-end);
+            }
+            img{
+                height: 70%;
+                border-radius: 8px;
+                transition: 400ms;
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
+            }
+            .img-bg{
+                height: 100%;
+                @include flexbox(flex-end, center);
+                .bg{
+                    @include flexbox(center, center);
+                    height: 60%;
+                    padding: 24px 24px;
+                    border-radius: 8px;
+                    background-color: rgb(216, 216, 216);
+                }
+                img{
+                    height: 75%;
+                }
+            }
+        }
+        .home-page-content{
+            @include flexbox(center, flex-end);
+            gap: 16px;
+            flex-direction: column;
+            text-align: center;
+            padding: 12px 12px 0px 12px;
+            .main-heading{
+                font-size: 28px;
+                font-weight: 500;
+            }
+            .sub-heading{
+                color: rgb(129, 129, 129);
+                font-weight: 450;
+                font-size: 14px;
+            }
+            .start-btn{
+                margin-top: 12px;
+                color: white;
+                border: 1px solid black;
+                box-shadow: 0.1em 0.1em 0 0 black,
+                inset 0em 5em 0 0 black;
+                outline:none;
+                font-size: 12px;
+                padding: 10px 18px;
+                border-radius: 50px;
+                transition: 400ms;
+                &:hover{
+                    box-shadow: 0.1em 0.1em 0 0 black,
+                    inset 0.1em 0.1em 0 0 black;
+                    background-color: white;
+                    color: black;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
 
