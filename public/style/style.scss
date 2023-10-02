@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin flexbox($align, $justify){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    header{
+        @include flexbox(center, space-between);
+        height: 50px;
+        padding: 0 25px;
+        .logo{
+            font-weight: 600;
+            font-size: 18px;
+        }
+        nav{
+            width: 50%;
+            @include flexbox(center, center);
+            gap: 36px;
+            a{
+                text-decoration: none;
+                color: black;
+                font-weight: 450;
+                font-size: 14px;
+            }
+        }
+        .sign-in{
+            .sign-in-btn{
+                padding: 6px 12px;
+                border: 1px solid black;
+                background-color: transparent;
+                outline: none;
+                border-radius: 50px;
+                font-size: 14px;
+                color: black;
+                transition: 400ms;
+                &:hover{
+                    cursor: pointer;
+                    color: white;
+                    border: 1px solid black;
+                    box-shadow: 0.1em 0.1em 0 0 black,
+                                inset 0em 5em 0 0 black;
+                }
+            }
+        }
+
+    }
+}
+
