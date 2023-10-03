@@ -1,7 +1,9 @@
 const backToTop = document.querySelector(".back-to-top"),
       logoWrap = document.querySelector(".logo"),
       info_box = document.querySelector(".info_box"),
-      cross_btn = document.querySelector("#cross_info_btn");
+      cross_btn = document.querySelector("#cross_info_btn"),
+      sign_in_btn = document.querySelector(".sign-in-btn"),
+      start_today = document.querySelector(".start-btn");
 
 
 // timer to show info box
@@ -11,13 +13,24 @@ const timer = () => {
     }, 1000);
 };
 
-// closing the info box
 cross_btn.addEventListener("click", () => {
     info_box.style.display = "none";
 });
 
-// timer();
+timer();
 
+
+// sign in btn
+sign_in_btn.addEventListener("click", () => {
+    let name = prompt("Enter your first name: ");
+    sign_in_btn.innerHTML = name;
+});
+
+// start btn
+start_today.addEventListener("click", () => {
+    let name = prompt("Enter your first name: ");
+    start_today.innerHTML = `Welcome ${name}`; 
+})
 
 // github link
 logoWrap.addEventListener("click", () => {
