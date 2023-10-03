@@ -8,8 +8,8 @@
 -----
 ## Team members:
 ### Leader: Sagar Sharma
-### Member 1: 
-### Member 2: 
+### Member 1: Aayush kumar 
+### Member 2: Raghav Jha
 
 ### Given Design to replicate
 <img src="public/img/replica_design.jpg">
