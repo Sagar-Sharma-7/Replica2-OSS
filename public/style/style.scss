@@ -34,14 +34,12 @@ body{
         .logo{
             font-weight: 600;
             font-size: 18px;
-            border: 1px solid orange;
 
         }
         nav{
             width: 50%;
             @include flexbox(center, center);
             gap: 36px;
-            border: 1px solid orange;
             a{
                 text-decoration: none;
                 color: black;
@@ -59,7 +57,6 @@ body{
             }
         }
         .sign-in{
-            border: 1px solid orange;
             .sign-in-btn{
                 padding: 6px 12px;
                 border: none;
@@ -85,16 +82,12 @@ body{
     .home-page-wrap{
         width: 100vw;
         @include flexbox(center, center);
-        border: 1px solid blue;
         .home-page{
             height: calc(100vh - 50px);
             width: 100%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             max-width: 1440px;
-            div{
-                border: 1px solid green;
-            }
             .img-home-wrap{
                 // border: 1px solid green;
                 padding: 20px 10%;
@@ -119,14 +112,13 @@ body{
                 .img-bg{
                     width: 100%;
                     @include flexbox(flex-end, center);
-                    border: 1px solid blue;
                     height: 100%;
                     .bg{
                         @include flexbox(center, center);
                         height: 70%;
                         padding: 24px 24px;
                         border-radius: 8px;
-                        background-color: rgb(216, 216, 216);
+                        background-color: rgb(230, 230, 230);
                     }
                     img{
                         width: 65%;
@@ -180,8 +172,8 @@ body{
     .footer{   
     height: 100px;
     text-align: center;
-    padding-top: 12px;
     max-width: 1440px;
+    padding: 12px 24px;
     .msg{
         color: rgb(129, 129, 129);
         font-size: 12px;
@@ -190,7 +182,6 @@ body{
         width: 100%;
         @include flexbox(flex-end, center);
         margin-top: 8px;
-        border: 1px solid green;
 
         .company-name{
             display: grid;
@@ -199,7 +190,6 @@ body{
             img{
                 width: 75%;
                 transition: 200ms;
-                border: 1px solid red;
                 &:hover{
                     cursor: pointer;
                     transform: scale(1.1);
@@ -211,8 +201,11 @@ body{
 }
 
 .second-page{
+    width: 100vw;
+    @include flexbox(center, center);
+    .secondpage-items-wrap{
     height: calc(100vh - 100px);
-    min-height: 700px;
+    min-height: 800px;
     padding: 24px 100px;
     .images-wrap{
         display: grid;
@@ -221,11 +214,13 @@ body{
         gap: 12px;
         div{
             height: calc((100vh - 160px)/2);
+            min-height: 350px;
             @include flexbox(center, center);
             border-radius: 12px;
             background-color: rgb(238, 238, 238);
             img{
-                height: 85%;
+                width: 35%;
+                min-width: 100px;
                 border-radius: 12px;
                 box-shadow: 2px 2px 20px rgb(167, 167, 167);
                 transition: 400ms;
@@ -243,14 +238,22 @@ body{
         }
         .img2, .img3{
             width: 140%;
+            img{
+                width: 45%;
+            }
         }
         .img4{
             margin-left: 40%;
         }
     }
 }
+}
 
 .third-page{
+    width: 100vw;
+    @include flexbox(center, center);
+    .third-page-wrap{
+    max-width: 1440px;
     .working-section{
         height: 100vh;
         padding: 24px 124px;
@@ -288,6 +291,163 @@ body{
                     }
                 }
 
+            }
+        }
+    }
+    .path-wrap{
+        height: 50vh;
+        min-height: 600px;
+        padding: 12px 124px;
+        @include flexbox(flex-start, center);
+        flex-direction: column;
+        .main-heading{
+            font-size: 18px;
+            font-weight: 450;
+            margin-bottom: 12px;
+        }
+        .sub-heading{
+            font-size: 14px;
+            color: rgb(167, 167, 167);
+            width: 50%;
+            // margin-bottom: 48px;
+        }
+        .table{
+            margin-top: 48px;
+            border-top: 1px solid lightgray;
+            padding-top: 48px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-bottom: 1px solid lightgray;
+            padding-bottom: 24px;
+            .plan{
+                padding: 0px 24px;
+                &:nth-child(1){
+                    border-right: 1px solid lightgray;
+                }
+                &:nth-child(3){
+                    border-left: 1px solid lightgray;
+                }
+                .plan-heading{
+                    font-size: 18px;
+                    font-weight: 450;
+                    margin-bottom: 6px;
+                }
+                .plan-info{
+                    font-size: 12px;
+                    color: rgb(145, 145, 145);
+                }
+                .time-box{
+                    display: flex;
+                    gap: 12px;
+                    margin-top: 8px;
+                    .icon{
+                        color: rgb(167, 167, 167);
+                    }
+                    .time{
+                        color: rgb(167, 167, 167);
+                        font-size: 12px;
+                    }
+                }
+                .plan-tickbox{
+                    margin-top: 12px;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 6px;
+                    .tick{
+                        width: 20%;
+                    }
+                    .tick-info{
+                        width: 180%;
+                        margin-left: -80%;
+                        font-size: 14px;
+                        font-weight: 450;
+                    }
+                }
+                .book-btn{
+                    border: none;
+                    outline: none;
+                    box-shadow: 0.1em 0.1em 0 0 black,
+                    inset 0em 20em 0 0 black;
+                    color: white;
+                    width: 100%;
+                    padding: 12px 12px;
+                    margin-top: 24px;
+                    border-radius: 50px;
+                    transition: 400ms;
+                    &:hover{
+                        cursor: pointer;
+                        color: black;
+                        box-shadow: 0.2em 0.2em 0 0 black,
+                                    inset 0.2em 0.2em 0 0 black;
+                        background-color: white;
+                        border-radius: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+footer{
+    height: 75vh;
+    width: 100vw;
+    @include flexbox(center, center);
+    padding: 12px 12px;
+    min-height: 350px;
+    .footer-wrap{
+        max-width: 1440px;
+        @include flexbox(center, center);
+        flex-direction: column;
+        background-color: rgb(12, 12, 12);
+        width: 100%;
+        border-radius: 12px;
+        height: 100%;
+        .top-footer{
+            @include flexbox(center, center);
+            flex-direction: column;
+            gap: 24px;
+            height: 80%;
+            .main-heading{
+                font-size: 18px;
+                color: white;
+                font-weight: 450;
+            }
+            .sub-heading{
+                font-size: 14px;
+                color: rgb(161, 161, 161);
+                width: 60%;
+                text-align: center;
+            }
+            .start-btn{
+                background-color: white;
+                border: none;
+                outline: none;
+                width: 50%;
+                min-width: 100px;
+                transition: 200ms;
+                border-radius: 50px;
+                padding: 12px 12px;
+                font-size: 14px;
+                &:hover{
+                    cursor: pointer;
+                    border-radius: 0px;
+                }
+            }
+        }
+        .bottom-footer{
+            height: 16%;
+            padding: 0px 24px;
+            width: 100%;
+            @include flexbox(flex-end, space-between);
+            .replica{
+                color: white;
+            }
+            .copyright{
+                color: rgb(129, 129, 129);
+                span{
+                    color: white;
+                }
             }
         }
     }
