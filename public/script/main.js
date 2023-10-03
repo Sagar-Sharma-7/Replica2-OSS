@@ -36,3 +36,17 @@ function scrollBackToTop(){
         backToTop.style.display = "none";
     }
 }
+
+
+// team info in console
+function Person(name, email, regno) {
+    this.name = name;
+    this.email = email;
+    this.regno = regno;
+  }
+  
+  const sagar = new Person("Sagar Sharma", "sagarsharma_230113@aitpune.edu.in", 230113);
+  const raghav = new Person("Raghav Jha", "raghavjha_230020@aitpune.edu.in", 230020);
+  const aayush = new Person("Aayush Kumar", "aayushkumar_230197@aitpune.edu.in", 230197);
+  
+  console.table([sagar, raghav, aayush]);
