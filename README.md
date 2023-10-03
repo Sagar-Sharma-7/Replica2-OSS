@@ -6,6 +6,11 @@
 ### ```NOTE: Replica is event organised by OSS Club of AIT Pune.```
 
 -----
+## Team members:
+### Leader: Sagar Sharma
+### Member 1: 
+### Member 2: 
+
 ### Given Design to replicate
 <img src="public/img/replica_design.jpg">
 
