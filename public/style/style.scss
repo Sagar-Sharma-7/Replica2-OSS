@@ -27,6 +27,7 @@ body{
     overflow-x: hidden;
 }
 
+
 .main-container{
     width: 100%;
     height: 100vh;
@@ -38,7 +39,7 @@ body{
         .logo{
             font-weight: 600;
             font-size: 18px;
-
+            cursor: pointer;
         }
         nav{
             width: 50%;
@@ -54,8 +55,8 @@ body{
                 box-shadow: 0em 0em 0 0 black,
                 inset 0em 0em 0 0 black;
                 &:hover{
-                    box-shadow: 0em 0em 0 0 black,
-                                inset 20em 0em 0 0 black;
+                    box-shadow: 0.1em 0.1em 0 0 black,
+                                inset 0em 5em 0 0 black;
                     color: white;
                 }
             }
