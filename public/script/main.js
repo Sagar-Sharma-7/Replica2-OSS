@@ -16,7 +16,7 @@ cross_btn.addEventListener("click", () => {
     info_box.style.display = "none";
 });
 
-timer();
+// timer();
 
 
 // github link

@@ -61,7 +61,8 @@ body {
 .main-container {
   width: 100%;
   height: 100vh;
-  min-height: 700px;
+  min-height: 800px;
+  border: 1px solid green;
 }
 .main-container header {
   display: flex;
@@ -608,5 +609,20 @@ footer .footer-wrap .bottom-footer .copyright span {
   }
   .main-container .home-page-wrap .home-page .home-page-content {
     margin-top: 60px;
+  }
+}
+@media all and (max-width: 700px) {
+  .third-page .third-page-wrap {
+    margin-bottom: 24px;
+  }
+  .third-page .third-page-wrap .working-section {
+    margin-bottom: 60px;
+    padding: 24px 60px;
+  }
+  .third-page .third-page-wrap .working-section .working-box-wrap .box .info {
+    width: 100%;
+  }
+  .third-page .third-page-wrap .path-wrap {
+    padding: 12px 24px;
   }
 }/*# sourceMappingURL=style.css.map */
