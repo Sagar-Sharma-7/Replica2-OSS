@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Customize scrollbar width */
+/* Customize scrollbar */
 ::-webkit-scrollbar {
   display: none;
 }

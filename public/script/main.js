@@ -23,13 +23,20 @@ timer();
 // sign in btn
 sign_in_btn.addEventListener("click", () => {
     let name = prompt("Enter your first name: ");
+    if(name == null || name == ""){
+        name = "Sign In";
+    }
     sign_in_btn.innerHTML = name;
 });
 
 // start btn
 start_today.addEventListener("click", () => {
     let name = prompt("Enter your first name: ");
-    start_today.innerHTML = `Welcome ${name}`; 
+    if(name == null || name == ""){
+        start_today.innerHTML = "Start Today";
+    }else{
+        start_today.innerHTML = `Welcome ${name}`; 
+    }
 })
 
 // github link
